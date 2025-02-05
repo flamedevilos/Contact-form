@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Contact Form</title>
+    <link rel="icon" type="image/x-icon" href="/img/file-transfer.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+    <section class="contact-section">
+        <h1>Contact</h1>
+        <form action="/" method="post">            
+            <p>All fields are required.</p>
+            <div class="input-field field">
+                <input type="text" class="item" id="name" placeholder="Full Name" autocomplete="off">
+                <span class="msg-error">Name is required.</span>
+            </div>
+            <div class="input-field field">
+                <input type="email" class="item" id="email" placeholder="example@mail.com" autocomplete="off">
+                <span class="msg-error email">Email is required.</span>
+            </div>
+            <div class="input-field field">
+                <input type="text" class="item" id="subject" placeholder="About..." autocomplete="off">
+                <span class="msg-error">Subject is required.</span>
+            </div>
+            <div class="textarea-field field">
+                <textarea name="request" id="request" class="item" col="30" rows="5" placeholder="Your request..." autocomplete="off"></textarea>
+                <span class="msg-error">Request is required.</span>              
+            </div>
+            
+            <button type="submit">Send</button>
+        
+        </form>
+    </section>
+    <!-- JScript -->
+    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
